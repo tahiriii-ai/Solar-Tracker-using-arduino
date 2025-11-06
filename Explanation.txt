@@ -1,0 +1,57 @@
+# Solar Tracker Arduino Project Explanation
+
+This document explains how the solar tracking code and hardware work.
+
+## 1. Project Purpose
+
+The goal of this project is to automatically rotate a solar panel toward the direction of maximum sunlight. Two LDR sensors compare light intensity, and the servo rotates toward the brighter side.
+
+## 2. Hardware Used
+
+* Arduino Uno / Nano
+* 2 × LDR Sensors
+* 2 × 10kΩ Resistors
+* Servo Motor
+* Jumper wires, breadboard, solar panel (optional)
+
+## 3. Working Logic
+
+1. The Arduino reads light intensity from LDR1 and LDR2.
+2. If one side has more light, the servo slowly rotates in that direction.
+3. When both values are almost equal, the servo stops.
+
+## 4. Code Flow
+
+* Read LDR values
+* Find the difference
+* Compare
+* Move servo left or right
+* Stop when difference is small
+
+## 5. Proteus Simulation
+
+The project can be simulated in Proteus.
+Required items:
+
+* Arduino module
+* Servo motor module
+* Two LDRs
+* Resistor network
+
+Upload the same code in Proteus and attach LDRs and servo exactly like real hardware.
+
+## 6. Circuit Explanation
+
+LDRs form a voltage divider and create different analog outputs depending on light. Arduino compares both values.
+
+## 7. Advantages
+
+* Improves solar panel efficiency
+* Fully automatic operation
+* Low cost
+
+## 8. Applications
+
+* Solar street lights
+* Agriculture and irrigation systems
+* Educational and research projects
